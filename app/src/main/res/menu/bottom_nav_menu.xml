@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--这里的顺序就是在Main中从左至右排序的顺序-->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/nhome"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/nservice"
+        android:title="全部服务" />
+
+    <item
+        android:id="@+id/navigation_poverty"
+        android:icon="@drawable/npoverty"
+        android:title="精准扶贫" />
+
+    <item
+        android:id="@+id/navigation_news"
+        android:icon="@drawable/nnews"
+        android:title="新闻" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/nperson"
+        android:title="个人中心" />
+
+</menu>

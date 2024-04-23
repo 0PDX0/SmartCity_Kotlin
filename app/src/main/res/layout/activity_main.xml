@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
+    <!--android:background="?android:attr/windowBackground"
+        将 Android layout/View 元素的背景设置为系统定义的窗口背景属性。此属性通常由设备的系统主题设置，可以包含纯色或图像。通过将背景设置为此属性，该元素将与其他系统 UI 元素无缝融合-->
+    <!--app:labelVisibilityMode="labeled"
+        labeled:管你有没有空间，都显示
+        auto：仅当有足够的可用空间时，才会显示标签。如果没有足够的空间，标签将自动隐藏，仅显示图标。
+        selected：标签将仅针对当前选定的选项卡或菜单项显示。对于其余项目，将仅显示图标。
+        unlabeled：不会显示任何选项卡或菜单项的标签。仅显示图标。-->
+    <!--app:menu="@menu/bottom_nav_menu"
+        app:menu 指定菜单xml文件（文字和图片都写在这个里面）
+
+        android:theme="@style/footButton":设置它选中与未选择情况的颜色-->
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/mobile_navigation" />
+    <!--android:name="androidx.navigation.fragment.NavHostFragment"：此行指定 NavHostFragment 的类名。它负责处理导航逻辑，并根据导航图显示相应的片段。
+        app:defaultNavHost="true"：通过将此属性设置为 ，NavHostFragment 将成为处理导航的默认主机。这意味着，如果用户按下系统后退按钮，应用将在 NavHostFragment 中导航，而不是退出应用。true
+        app:defaultNavHost=“true”
+        可以将第一个fragment设置为导航首页, 而且当页面处于其它的fragment时, 按下back键, 首先将回退到第一个fragment, 而非直接退出.
+        app:navGraph="@navigation/mobile_navigation"：此属性指定导航图资源文件，用于定义应用导航的结构和流程。这是导航图文件的名称，应在 res/navigation 目录中定义。它包含目标（片段或活动）以及在它们之间导航的操作。mobile_navigation
+        总体而言，此代码将 NavHostFragment 设置为导航的默认主机，并将其与定义应用导航结构的导航图资源文件 相关联。mobile_navigation-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--android:state_enabled布尔值。true表示当前控件出于可用的状态。比如可以被点击
+        android:state_focused布尔值。ture指当前控件获得焦点时的状态。默认为false；一般用于EdiText。-->
+    <item android:state_enabled="true" android:state_focused="true">
+        <shape>
+            <solid android:color="@color/white" />
+            <stroke android:color="#0A45DC" android:width="1dp" />
+            <corners android:radius="5dp" />
+        </shape>
+
+    </item>
+
+    <item android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/white" />
+            <stroke android:color="#A6A1A1" android:width="1dp" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+</selector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!--navigation 必须指定一个 startDestination 表示 整个页面的起始Fragment
+        fragment中的name标签为 要跳转的Fragment的全路径类名
+        action 中的destination 表示要跳转的 Fragment 的id
+        navigation创建好了，就要和Activity进行关联了，有两种方式，第一种是在xml里关联，一种是在代码里关联-->
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.kotlin_zhcs.ui.home.HomeFragment"
+        android:label="首页"
+        tools:layout="@layout/fragment_home" />
+    <!--android:name指定了Fragment(逻辑处理)文件所在的位置，tools:layout指定了该碎片的布局文件所在位置-->
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.kotlin_zhcs.ui.dashboard.DashboardFragment"
+        android:label="全部服务"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.kotlin_zhcs.ui.notifications.NotificationsFragment"
+        android:label="个人中心"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_poverty"
+        android:name="com.example.kotlin_zhcs.ui.poverty.PovertyFragment"
+        android:label="精准扶贫"
+        tools:layout="@layout/fragment_poverty" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.kotlin_zhcs.ui.news.NewsFragment"
+        android:label="新闻"
+        tools:layout="@layout/fragment_news" />
+
+
+
+</navigation>

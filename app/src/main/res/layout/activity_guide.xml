@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.guide.GuideActivity"
+    > <!--要想要不生成那个Bing文件必须加
+    加了这个就不能再去使用Binding了，会报错的-->
+
+
+    <com.youth.banner.Banner
+        android:id="@+id/guide_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:banner_infinite_loop="false"
+        app:banner_auto_loop="false" />
+    <!--
+        app:banner_infinite_loop="false"：让他无法到最后一张图片时往第一张跳转
+        开启这个就相当于关闭了自动轮播
+        但是可以重新去打开自动轮播，两个效果都存在，也是可以的-->
+
+    <Button
+        android:id="@+id/guideNET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="设置网络"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:background="@drawable/radius_five"
+        android:backgroundTint="@color/theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/guideOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="进入主页"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:background="@drawable/radius_five"
+        android:backgroundTint="@color/theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        />
+    <!--app:layout_constraintRight_toLeftOf="parent":
+        使用本属性的控件的右方对齐父控件的左方 (都是边缘)-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
